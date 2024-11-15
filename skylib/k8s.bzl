@@ -170,7 +170,7 @@ def k8s_deploy(
             images = images,
             image_registry = image_registry,
             image_repository = image_repository,
-            image_repository_prefix = "{BUILD_USER}",
+            image_repository_prefix = image_repository_prefix,
             image_digest_tag = image_digest_tag,
             tags = tags,
         )
@@ -213,6 +213,17 @@ def k8s_deploy(
             name = name + ".delete",
             srcs = [name],
             command = "delete",
+            cluster = cluster,
+            push = False,
+            user = user,
+            namespace = namespace,
+            tags = tags,
+            visibility = visibility,
+        )
+        kubectl(
+            name = name + ".diff",
+            srcs = [name],
+            command = "diff",
             cluster = cluster,
             push = False,
             user = user,

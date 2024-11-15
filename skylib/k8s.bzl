@@ -213,6 +213,16 @@ def k8s_deploy(
             visibility = visibility,
         )
         kubectl(
+            name = name + ".diff",
+            srcs = [name],
+            command = "diff",
+            cluster = cluster,
+            user = user,
+            namespace = namespace,
+            tags = tags,
+            visibility = visibility,
+        )
+        kubectl(
             name = name + ".delete",
             srcs = [name],
             command = "delete",

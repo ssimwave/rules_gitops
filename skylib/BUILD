@@ -29,6 +29,7 @@ more_stable_status(
     name = "more_stable_status",
     vars = [
         "BUILD_USER",
+        "STABLE_GIT_USER",
     ],
     visibility = ["//visibility:public"],
 )

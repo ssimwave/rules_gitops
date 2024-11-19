@@ -17,7 +17,7 @@ load("//skylib:stamp.bzl", "stamp")
 
 _binaries = {
     "darwin_amd64": ("https://github.com/kubernetes-sigs/kustomize/releases/download/kustomize%2Fv4.5.3/kustomize_v4.5.3_darwin_amd64.tar.gz", "b0a6b0568273d466abd7cd535c556e44aa9ff5f54c07e86ed9f3016b416de992"),
-    "linux_amd64": ("https://github.com/kubernetes-sigs/kustomize/releases/download/kustomize%2Fv4.5.3/kustomize_v4.5.3_linux_amd64.tar.gz", "e4dc2f795235b03a2e6b12c3863c44abe81338c5c0054b29baf27dcc734ae693"),
+    "linux_amd64": ("https://github.com/kubernetes-sigs/kustomize/releases/download/kustomize%2Fv4.5.7/kustomize_v4.5.7_linux_amd64.tar.gz", "701e3c4bfa14e4c520d481fdf7131f902531bfc002cb5062dcf31263a09c70c9"),
     "linux_arm64": ("https://github.com/kubernetes-sigs/kustomize/releases/download/kustomize%2Fv4.5.3/kustomize_v4.5.3_linux_arm64.tar.gz", "97cf7d53214388b1ff2177a56404445f02d8afacb9421339c878c5ac2c8bc2c8"),
 }
 

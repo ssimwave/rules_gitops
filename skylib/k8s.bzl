@@ -176,7 +176,7 @@ def k8s_deploy(
         )
         kustomize(
             name = name,
-            namespace = namespace,
+            namespace = None,
             configmaps_srcs = configmaps_srcs,
             secrets_srcs = secrets_srcs,
             # disable_name_suffix_hash is renamed to configmaps_renaming in recent Kustomize

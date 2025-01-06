@@ -198,7 +198,8 @@ def _kustomize_impl(ctx):
         tmpfiles.append(ctx.executable._resolver)
         for img in ctx.attr.images:
             kpi = img[K8sPushInfo]
-            regrepo = kpi.registry + "/{STABLE_GIT_USER}/" + kpi.legacy_image_name
+            prefix = kpi.repository[:-(len(str(kpi.image_label))-3)]
+            regrepo = kpi.registry + "/" + prefix + "/" + kpi.legacy_image_name
             if "{" in regrepo:
                 regrepo = stamp(ctx, regrepo, tmpfiles, ctx.attr.name + regrepo.replace("/", "_"))
 
